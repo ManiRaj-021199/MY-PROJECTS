@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebsiteProject.UI.ADMIN
 {
@@ -11,7 +6,29 @@ namespace WebsiteProject.UI.ADMIN
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			if(!IsPostBack)
+			{
+				if(Session["AdminUserName"] != null)
+				{
+					Response.Redirect("/Admin/Dashboard");
+				}
+			}
+		}
 
+		protected void AdminFormSubmitted(object sender, EventArgs e)
+		{
+			string userName = adminUserName.Value.ToString();
+			string password = adminPassword.Value.ToString();
+
+			if(new WebsiteProjectDB.ADMIN.CheckLogin().AdminLoginValidation(userName, password))
+			{
+				Session["AdminUserName"] = userName;
+				Response.Redirect("/Admin/Dashboard");
+			}
+			else
+			{
+				Response.Write("Wrong Password");
+			}
 		}
 	}
 }

@@ -7,33 +7,52 @@
     <title>ADMIN</title>
     <link rel="stylesheet" href="../CSS/ADMIN/AdminMasterPage.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Admin Page Container -->
-        <div class="adminContainer">
-            <!-- Admin Page NavBar -->
-            <div class="adminPageNavBar">
-                <h1>Blog Web</h1>
-                <asp:Button Text="Admin" runat="server" />
-            </div>
-            <!-- Admin Page Body -->
-            <div class="adminPageBody">
-                <div class="leftBodyDescription">
-                    <asp:Button CssClass="leftBodyDescriptionHeader" Text="Daily Puzzles" PostBackUrl="/Admin/DailyPuzzles" runat="server" />
-                    <asp:Button CssClass="leftBodyDescriptionHeader" Text="Admin Blog" PostBackUrl="/Admin/AdminBlog" runat="server" />
-                    <asp:Button CssClass="leftBodyDescriptionHeader" Text="User Statistics"  PostBackUrl="/Admin/UserStatistics" runat="server" />
-                    <div class="dropdownButton reportDropDownButton">
-                        <h3>Reports</h3>
-                        <i class="fa fa-caret-left"></i>
+        <div class="adminPageContainer">
+            <div class="adminPageMenu">
+                <div class="adminPageMenuHeader">
+                    <h2>Web Blog</h2>
+                </div>
+                <div class="adminPageMenuContent">
+                    <div class="adminUserProfile">
+                        <div class="profilePicture">
+                            <img src="../Images/admin.jpg">
+                        </div>
+                        <div class="profileDetails">
+                            <h4>My Admin</h4>
+                            <p>admin@gmail.com</p>
+                        </div>
                     </div>
-                    <div class="dropdownItem reportDropDown">
-                        <asp:Button CssClass="leftBodyDescriptionHeader" Text="Reports Link 1"  PostBackUrl="/Admin/Report1" runat="server" />
-                        <asp:Button CssClass="leftBodyDescriptionHeader" Text="Reports Link 2"  PostBackUrl="/Admin/Report2" runat="server" />
-                        <asp:Button CssClass="leftBodyDescriptionHeader" Text="Reports Link 3"  PostBackUrl="/Admin/Report3" runat="server" />
+                    <div class="adminPageMenuItems">
+                         <asp:LinkButton runat="server" Text="<i class='fa fa-dashboard'></i>   DASHBOARD" CssClass="adminPageMenuItem" PostBackUrl="/Admin/Dashboard" />
+                         <asp:LinkButton runat="server" Text="<i class='fa fa-puzzle-piece'></i>   DAILY PUZZLES" CssClass="adminPageMenuItem" PostBackUrl="/Admin/DailyPuzzles" />
+                         <asp:LinkButton runat="server" Text="<i class='fa fa-cubes'></i>   BLOG" CssClass="adminPageMenuItem" PostBackUrl="/Admin/AdminBlog" />
+                         <asp:LinkButton runat="server" Text="<i class='fa fa-user'></i>   USER STATISTICS" CssClass="adminPageMenuItem" PostBackUrl="/Admin/UserStatistics" />
+                         <asp:LinkButton runat="server" Text="<i class='fa fa-flag'></i>   REPORT" CssClass="adminPageMenuItem" PostBackUrl="/Admin/Report1" />
+                    </div>
+                    <hr />
+                    <div class="adminPageMoreMenuItems">
                     </div>
                 </div>
-                <div class="rightBodyDetails">
+            </div>
+            <div class="adminPageBody">
+                <div class="adminPageBodyHeader">
+                    <div class="leftSideHeader">
+                        <div class="searchBox">
+                            <i class="fa fa-search"></i>
+                            <input type="text" name="search" />
+                            <i class="fa fa-close"></i>
+                        </div>
+                    </div>
+                    <div class="rightSideHeader">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                </div>
+                <div class="adminPageBodyContent">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>

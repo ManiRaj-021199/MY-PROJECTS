@@ -1,4 +1,6 @@
-﻿var reportDropDown = document.querySelector('.reportDropDown');
+﻿/*
+
+var reportDropDown = document.querySelector('.reportDropDown');
 
 reportDropDown.style.display = 'none';
 
@@ -17,3 +19,5 @@ document.querySelector('.reportDropDownButton').addEventListener('click', () => 
         dropdownI.classList.add('fa-caret-left');
     }
 })
+
+*/

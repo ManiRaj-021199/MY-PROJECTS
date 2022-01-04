@@ -67,8 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\ADMIN\AdminLogin.css" />
+    <Content Include="CSS\ADMIN\UserStatistics.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\admin.jpg" />
     <Content Include="JS\AdminMasterPage.js" />
+    <Content Include="UI\ADMIN\Dashboard.aspx" />
     <Content Include="UI\ADMIN\AdminLogin.aspx" />
     <Content Include="UI\ADMIN\Report1.aspx" />
     <Content Include="UI\ADMIN\Report2.aspx" />
@@ -89,6 +93,13 @@
     </Compile>
     <Compile Include="MasterPages\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ADMIN\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ADMIN\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\ADMIN\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
@@ -150,6 +161,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteProjectBL\WebsiteProjectBL.csproj">
+      <Project>{5a4abf65-57b0-473f-8028-3eca930e08f5}</Project>
+      <Name>WebsiteProjectBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebsiteProjectDB\WebsiteProjectDB.csproj">
+      <Project>{45d71a16-0bf7-4b61-94fa-4b39cf4633af}</Project>
+      <Name>WebsiteProjectDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
