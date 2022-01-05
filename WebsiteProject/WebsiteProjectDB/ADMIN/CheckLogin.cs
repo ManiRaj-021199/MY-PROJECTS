@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace WebsiteProjectDB.ADMIN
@@ -9,11 +10,12 @@ namespace WebsiteProjectDB.ADMIN
 
 		public CheckLogin()
 		{
-			con = new SqlConnection("data source=.; database=WebsiteProject; integrated security=SSPI");
+			con = DBConnection.GetDataBaseConnection();
 		}
 
-		public bool AdminLoginValidation(string userName, string password)
+		public Dictionary<string, string> AdminLoginValidation(string userName, string password)
 		{
+			Dictionary<string, string> adminUser = new Dictionary<string, string>();
 			SqlCommand selectQuery = new SqlCommand($"SELECT * FROM AdminUsers WHERE Name='{userName}' AND Password='{password}'", con);
 
 			try
@@ -21,12 +23,19 @@ namespace WebsiteProjectDB.ADMIN
 				con.Open();
 				SqlDataReader sdr = selectQuery.ExecuteReader();
 
-				if(sdr.HasRows) return true;
-				else return false;
+				if(sdr.HasRows)
+				{
+					while(sdr.Read())
+					{
+						adminUser.Add(sdr["Name"].ToString(), sdr["EMail"].ToString());
+					}
+				}
+
+				return adminUser;
 			}
 			catch(Exception e)
 			{
-				return false;
+				return adminUser;
 			}
 			finally
 			{

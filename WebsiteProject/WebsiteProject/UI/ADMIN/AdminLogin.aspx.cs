@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WebsiteProject.UI.ADMIN
 {
@@ -20,9 +21,16 @@ namespace WebsiteProject.UI.ADMIN
 			string userName = adminUserName.Value.ToString();
 			string password = adminPassword.Value.ToString();
 
-			if(new WebsiteProjectDB.ADMIN.CheckLogin().AdminLoginValidation(userName, password))
+			Dictionary<string, string> adminUser = new WebsiteProjectDB.ADMIN.CheckLogin().AdminLoginValidation(userName, password);
+
+			if(adminUser.Count != 0)
 			{
-				Session["AdminUserName"] = userName;
+				foreach(KeyValuePair<string, string> user in adminUser)
+				{
+					Session["AdminUserName"] = user.Key;
+					Session["AdminEMail"] = user.Value;
+				}
+				
 				Response.Redirect("/Admin/Dashboard");
 			}
 			else

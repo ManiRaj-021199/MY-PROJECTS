@@ -11,10 +11,7 @@ namespace WebsiteProject.MasterPages
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			if(Session["AdminUserName"] == null)
-			{
-				Response.Redirect("/Admin");
-			}
+			
 		}
 	}
 }

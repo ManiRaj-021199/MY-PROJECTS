@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WebsiteProject.MasterPages
 {
@@ -11,7 +8,21 @@ namespace WebsiteProject.MasterPages
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			if(!IsPostBack)
+			{
+				ShowAllAuthors();
+			}
+		}
 
+		public void ShowAllAuthors()
+		{
+			SqlDataAdapter authors = new WebsiteProjectDB.CommonOperations.GetRecords().GetAuthorDetails();
+			DataSet ds = new DataSet();
+
+			authors.Fill(ds);
+
+			gvAuthorsListTable.DataSource = ds;
+			gvAuthorsListTable.DataBind();
 		}
 	}
 }

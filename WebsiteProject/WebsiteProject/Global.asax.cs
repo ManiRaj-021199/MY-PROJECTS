@@ -8,7 +8,7 @@ namespace WebsiteProject
 		void RegisterRoutes(RouteCollection routes)
 		{
 			// Default
-			// routes.MapPageRoute("", "", "~/UI/ADMIN/DailyPuzzles.aspx");
+			routes.MapPageRoute("", "", "~/UI/ADMIN/AdminLogin.aspx");
 
 			// Admin URL Routings
 			routes.MapPageRoute("Admin", "Admin", "~/UI/ADMIN/AdminLogin.aspx");

@@ -7,27 +7,27 @@
         <Columns>
             <asp:TemplateField HeaderText="Name">
                 <ItemTemplate>
-                    <asp:Label ID="lblName" Text="Name" runat="server"></asp:Label>
+                    <asp:Label ID="lblName" Text='<% #Eval("Name") %>' runat="server"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="EMail">
                 <ItemTemplate>
-                    <asp:Label ID="lblEMail" Text="EMail" runat="server"></asp:Label>
+                    <asp:Label ID="lblEMail" Text='<% #Eval("EMail") %>' runat="server"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Post Count">
                 <ItemTemplate>
-                    <asp:Label ID="lblLastName" Text="PostCount" runat="server"></asp:Label>
+                    <asp:Label ID="lblPostCount" Text='<% #Eval("PostCount") %>' runat="server"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Followers Count">
                 <ItemTemplate>
-                    <asp:Label ID="lblPhoneNumber" Text="FollowersCount" runat="server"></asp:Label>
+                    <asp:Label ID="lblFollowersCount" Text='<% #Eval("FollowerCount") %>' runat="server"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Total Reports">
                 <ItemTemplate>
-                    <asp:Label ID="lblEMail" Text="Reports" runat="server"></asp:Label>
+                    <asp:Label ID="lblReports" Text='<% #Eval("TotalReports") %>' runat="server"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

@@ -7,7 +7,23 @@ namespace WebsiteProject.MasterPages
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			
+			if(Session["AdminUserName"] == null)
+			{
+				Response.Redirect("/Admin");
+			}
+			else
+			{
+				siteAdminName.InnerText = Session["AdminUserName"].ToString();
+				siteAdminEmail.InnerText = Session["AdminEMail"].ToString();
+			}
+		}
+
+		protected void Logout_Click(object sender, EventArgs e)
+		{
+			Session.Remove("AdminUserName");
+			Session.Remove("AdminEMail");
+
+			Response.Redirect("/Admin");
 		}
 	}
 }

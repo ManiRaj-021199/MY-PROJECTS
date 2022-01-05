@@ -23,8 +23,8 @@
                             <img src="../Images/admin.jpg">
                         </div>
                         <div class="profileDetails">
-                            <h4>My Admin</h4>
-                            <p>admin@gmail.com</p>
+                            <h4 id="siteAdminName" runat="server"></h4>
+                            <p id="siteAdminEmail" runat="server"></p>
                         </div>
                     </div>
                     <div class="adminPageMenuItems">
@@ -49,7 +49,8 @@
                         </div>
                     </div>
                     <div class="rightSideHeader">
-                        <i class="fa fa-bell"></i>
+                        <i class="fa fa-bell" title="Notifications"></i>
+                        <asp:LinkButton ID="Logout" style="color: #2BA8D6" Text='<i class="fa fa-sign-out" title="Logout" style="font-size: 20px"></i>' runat="server" OnClick="Logout_Click" />
                     </div>
                 </div>
                 <div class="adminPageBodyContent">
