@@ -68,10 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\ADMIN\AdminLogin.css" />
+    <Content Include="CSS\ADMIN\Dashboard.css" />
     <Content Include="CSS\ADMIN\UserStatistics.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\admin.jpg" />
+    <Content Include="Images\emp.png" />
     <Content Include="JS\AdminMasterPage.js" />
+    <Content Include="UI\ADMIN\UserStatistics.aspx" />
     <Content Include="UI\ADMIN\Dashboard.aspx" />
     <Content Include="UI\ADMIN\AdminLogin.aspx" />
     <Content Include="UI\ADMIN\Report1.aspx" />
@@ -80,7 +83,6 @@
     <Content Include="UI\ADMIN\AdminBlog.aspx" />
     <Content Include="UI\ADMIN\DailyPuzzles.aspx" />
     <Content Include="CSS\ADMIN\AdminMasterPage.css" />
-    <Content Include="UI\ADMIN\UserStatistics.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +95,13 @@
     </Compile>
     <Compile Include="MasterPages\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ADMIN\UserStatistics.aspx.cs">
+      <DependentUpon>UserStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ADMIN\UserStatistics.aspx.designer.cs">
+      <DependentUpon>UserStatistics.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\ADMIN\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -144,13 +153,6 @@
       <DependentUpon>DailyPuzzles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\ADMIN\UserStatistics.aspx.cs">
-      <DependentUpon>UserStatistics.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\ADMIN\UserStatistics.aspx.designer.cs">
-      <DependentUpon>UserStatistics.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPages\AdminMasterPage.Master" />
