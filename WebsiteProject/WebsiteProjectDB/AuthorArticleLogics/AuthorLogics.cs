@@ -14,10 +14,12 @@ namespace WebsiteProjectDB.AuthorArticleLogics
 
 		public DataSet GetAllAuthorDetails()
 		{
-			SqlDataAdapter authorsList = new SqlDataAdapter("SELECT * FROM Authors", con);
 			DataSet dsAllAuthorDetails = new DataSet();
 
-			authorsList.Fill(dsAllAuthorDetails);
+			using(SqlDataAdapter authorsList = new SqlDataAdapter("SELECT * FROM Authors", con))
+			{
+				authorsList.Fill(dsAllAuthorDetails);
+			}
 
 			return dsAllAuthorDetails;
 		}
