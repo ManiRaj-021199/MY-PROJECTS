@@ -15,10 +15,10 @@
             <h3>Admin</h3>
         </div>
         <div class="formContainer">
-            <form method="POST"  id="form1" runat="server">
+            <form method="POST"  id="form1" autocomplete="off" runat="server">
                 <div class="inputContainer">
-                    <label>UserName</label>
-                    <input id="adminUserName" type="text" name="username" runat="server" /><br />
+                    <label>User Email</label>
+                    <input id="adminUserEmail" type="text" name="email" runat="server" /><br />
                 </div>
                 <div class="inputContainer">
                     <label>Password</label>

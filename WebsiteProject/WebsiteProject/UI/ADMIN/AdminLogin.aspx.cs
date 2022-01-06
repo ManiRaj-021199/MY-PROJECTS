@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
+using WebsiteProjectDB.Authentication;
 
 namespace WebsiteProject.UI.ADMIN
 {
@@ -18,18 +19,15 @@ namespace WebsiteProject.UI.ADMIN
 
 		protected void AdminFormSubmitted(object sender, EventArgs e)
 		{
-			string userName = adminUserName.Value.ToString();
-			string password = adminPassword.Value.ToString();
+			string strUserEmail = adminUserEmail.Value.ToString();
+			string strUserPassword = adminPassword.Value.ToString();
 
-			Dictionary<string, string> adminUser = new WebsiteProjectDB.ADMIN.CheckLogin().AdminLoginValidation(userName, password);
+			Hashtable adminUser = new AdminAuthentication().Login(strUserEmail, strUserPassword);
 
-			if(adminUser.Count != 0)
+			if(adminUser.Contains("strUserName"))
 			{
-				foreach(KeyValuePair<string, string> user in adminUser)
-				{
-					Session["AdminUserName"] = user.Key;
-					Session["AdminEMail"] = user.Value;
-				}
+				Session["AdminUserName"] = adminUser["strUserName"];
+				Session["AdminEMail"] = adminUser["strUserEMail"];
 				
 				Response.Redirect("/Admin/Dashboard");
 			}

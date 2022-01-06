@@ -24,13 +24,13 @@ namespace WebsiteProject.UI.ADMIN
 		protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
 		/// <summary>
-		/// adminUserName control.
+		/// adminUserEmail control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.HtmlControls.HtmlInputText adminUserName;
+		protected global::System.Web.UI.HtmlControls.HtmlInputText adminUserEmail;
 
 		/// <summary>
 		/// adminPassword control.

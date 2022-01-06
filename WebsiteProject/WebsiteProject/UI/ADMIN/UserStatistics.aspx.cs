@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
+using WebsiteProjectDB.AuthorArticleLogics;
 
 namespace WebsiteProject.MasterPages
 {
@@ -16,10 +16,7 @@ namespace WebsiteProject.MasterPages
 
 		public void ShowAllAuthors()
 		{
-			SqlDataAdapter authors = new WebsiteProjectDB.CommonOperations.GetRecords().GetAuthorDetails();
-			DataSet ds = new DataSet();
-
-			authors.Fill(ds);
+			DataSet ds = new AuthorLogics().GetAllAuthorDetails();
 
 			gvAuthorsListTable.DataSource = ds;
 			gvAuthorsListTable.DataBind();

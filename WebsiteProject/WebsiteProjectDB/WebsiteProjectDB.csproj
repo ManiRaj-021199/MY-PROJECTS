@@ -42,9 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADMIN\CheckLogin.cs" />
-    <Compile Include="CommonOperations\GetRecords.cs" />
+    <Compile Include="AuthorArticleLogics\ArticleLogics.cs" />
+    <Compile Include="AuthorArticleLogics\AuthorLogics.cs" />
+    <Compile Include="COMMON\Abstract Classes\LoggedInUserAccess.cs" />
+    <Compile Include="Access\AdminAccess.cs" />
+    <Compile Include="Access\LoggedInUserAccess.cs" />
+    <Compile Include="Access\VisitorAccess.cs" />
+    <Compile Include="Authentication\AdminAuthentication.cs" />
+    <Compile Include="Authentication\UserAuthentication.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="COMMON\Interfaces\IAuthentication.cs" />
+    <Compile Include="COMMON\Interfaces\IUserAuthentication.cs" />
+    <Compile Include="COMMON\Interfaces\IVisitorAccess.cs" />
+    <Compile Include="COMMON\POCO Classes\Article.cs" />
+    <Compile Include="COMMON\POCO Classes\Author.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
