@@ -7,9 +7,9 @@
         <div class="adminBlogHeader">
             <h1 class="adminBlogHeaderTitle">Admin Blog</h1>
             <div class="adminBlogHeaderButtons">
-                <asp:Button Text="Show My Articles" runat="server" />
-                <asp:Button Text="Show All Admin Articles" runat="server" />
-                <asp:Button Text="Show All User Articles" runat="server" />
+                <asp:LinkButton Text="Show My Articles" PostBackUrl="/Admin/AdminBlog/ShowMyArticles" runat="server" />
+                <asp:LinkButton Text="Show All Admin Articles" PostBackUrl="/Admin/AdminBlog/ShowAllAdminArticles" runat="server" />
+                <asp:LinkButton Text="Show All User Articles" PostBackUrl="/Admin/AdminBlog/ShowAllUserArticles" runat="server" />
             </div>
         </div>
         <hr />

@@ -20,9 +20,13 @@
 	justify-content: flex-end;
 }
 
-.adminBlogContainer .adminBlogHeader .adminBlogHeaderButtons input {
+.adminBlogContainer .adminBlogHeader .adminBlogHeaderButtons a {
 	padding: 10px 20px;
 	margin-left: 10px;
+	color: black;
+	border: 1px solid black;
+	padding: 5px 10px;
+	text-decoration: none;
 }
 
 .adminBlogContainer .adminBlogFormContainer {

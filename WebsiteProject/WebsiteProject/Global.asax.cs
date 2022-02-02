@@ -14,11 +14,11 @@ namespace WebsiteProject
 			routes.MapPageRoute("Admin", "Admin", "~/UI/ADMIN/AdminLogin.aspx");
 			routes.MapPageRoute("Dashboard", "Admin/Dashboard", "~/UI/ADMIN/Dashboard.aspx");
 			routes.MapPageRoute("DailyPuzzles", "Admin/DailyPuzzles", "~/UI/ADMIN/DailyPuzzles.aspx");
-			routes.MapPageRoute("AdminBlog", "Admin/AdminBlog", "~/UI/ADMIN/AdminBlog.aspx");
+			routes.MapPageRoute("AdminBlog", "Admin/AdminBlog", "~/UI/ADMIN/Blog/AdminBlog.aspx");
+			routes.MapPageRoute("ShowMyArticles", "Admin/AdminBlog/ShowMyArticles", "~/UI/ADMIN/Blog/ShowMyArticles.aspx");
+			routes.MapPageRoute("ShowAllAdminArticles", "Admin/AdminBlog/ShowAllAdminArticles", "~/UI/ADMIN/Blog/ShowAllAdminArticles.aspx");
+			routes.MapPageRoute("ShowAllUserArticles", "Admin/AdminBlog/ShowAllUserArticles", "~/UI/ADMIN/Blog/ShowAllUserArticles.aspx");
 			routes.MapPageRoute("UserStatistics", "Admin/UserStatistics", "~/UI/ADMIN/UserStatistics.aspx");
-			routes.MapPageRoute("Report1", "Admin/Report1", "~/UI/ADMIN/Report1.aspx");
-			routes.MapPageRoute("Report2", "Admin/Report2", "~/UI/ADMIN/Report2.aspx");
-			routes.MapPageRoute("Report3", "Admin/Report3", "~/UI/ADMIN/Report3.aspx");
 		}
 
 		protected void Application_Start(object sender, EventArgs e)

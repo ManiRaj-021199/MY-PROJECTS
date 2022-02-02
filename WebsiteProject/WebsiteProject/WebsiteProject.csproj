@@ -75,13 +75,13 @@
     <Content Include="Images\admin.jpg" />
     <Content Include="Images\emp.png" />
     <Content Include="JS\AdminMasterPage.js" />
+    <Content Include="UI\ADMIN\Blog\ShowMyArticles.aspx" />
+    <Content Include="UI\ADMIN\Blog\ShowAllAdminArticles.aspx" />
+    <Content Include="UI\ADMIN\Blog\ShowAllUserArticles.aspx" />
     <Content Include="UI\ADMIN\UserStatistics.aspx" />
     <Content Include="UI\ADMIN\Dashboard.aspx" />
     <Content Include="UI\ADMIN\AdminLogin.aspx" />
-    <Content Include="UI\ADMIN\Report1.aspx" />
-    <Content Include="UI\ADMIN\Report2.aspx" />
-    <Content Include="UI\ADMIN\Report3.aspx" />
-    <Content Include="UI\ADMIN\AdminBlog.aspx" />
+    <Content Include="UI\ADMIN\Blog\AdminBlog.aspx" />
     <Content Include="UI\ADMIN\DailyPuzzles.aspx" />
     <Content Include="CSS\ADMIN\AdminMasterPage.css" />
     <Content Include="Web.config" />
@@ -96,6 +96,27 @@
     </Compile>
     <Compile Include="MasterPages\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ADMIN\Blog\ShowMyArticles.aspx.cs">
+      <DependentUpon>ShowMyArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ADMIN\Blog\ShowMyArticles.aspx.designer.cs">
+      <DependentUpon>ShowMyArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ADMIN\Blog\ShowAllAdminArticles.aspx.cs">
+      <DependentUpon>ShowAllAdminArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ADMIN\Blog\ShowAllAdminArticles.aspx.designer.cs">
+      <DependentUpon>ShowAllAdminArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ADMIN\Blog\ShowAllUserArticles.aspx.cs">
+      <DependentUpon>ShowAllUserArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ADMIN\Blog\ShowAllUserArticles.aspx.designer.cs">
+      <DependentUpon>ShowAllUserArticles.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\ADMIN\UserStatistics.aspx.cs">
       <DependentUpon>UserStatistics.aspx</DependentUpon>
@@ -118,32 +139,11 @@
     <Compile Include="UI\ADMIN\AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI\ADMIN\Report1.aspx.cs">
-      <DependentUpon>Report1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\ADMIN\Report1.aspx.designer.cs">
-      <DependentUpon>Report1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ADMIN\Report2.aspx.cs">
-      <DependentUpon>Report2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\ADMIN\Report2.aspx.designer.cs">
-      <DependentUpon>Report2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ADMIN\Report3.aspx.cs">
-      <DependentUpon>Report3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\ADMIN\Report3.aspx.designer.cs">
-      <DependentUpon>Report3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI\ADMIN\AdminBlog.aspx.cs">
+    <Compile Include="UI\ADMIN\Blog\AdminBlog.aspx.cs">
       <DependentUpon>AdminBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\ADMIN\AdminBlog.aspx.designer.cs">
+    <Compile Include="UI\ADMIN\Blog\AdminBlog.aspx.designer.cs">
       <DependentUpon>AdminBlog.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\ADMIN\DailyPuzzles.aspx.cs">

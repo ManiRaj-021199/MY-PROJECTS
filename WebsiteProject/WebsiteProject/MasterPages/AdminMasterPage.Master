@@ -20,7 +20,7 @@
                 <div class="adminPageMenuContent">
                     <div class="adminUserProfile">
                         <div class="profilePicture">
-                            <img src="../Images/admin.jpg">
+                            <img src="/Images/admin.jpg" alt="Profile Picture" />
                         </div>
                         <div class="profileDetails">
                             <h4 id="siteAdminName" runat="server"></h4>
@@ -32,7 +32,6 @@
                          <asp:LinkButton runat="server" Text="<i class='fa fa-puzzle-piece'></i>   DAILY PUZZLES" CssClass="adminPageMenuItem" PostBackUrl="/Admin/DailyPuzzles" />
                          <asp:LinkButton runat="server" Text="<i class='fa fa-cubes'></i>   BLOG" CssClass="adminPageMenuItem" PostBackUrl="/Admin/AdminBlog" />
                          <asp:LinkButton runat="server" Text="<i class='fa fa-user'></i>   USER STATISTICS" CssClass="adminPageMenuItem" PostBackUrl="/Admin/UserStatistics" />
-                         <asp:LinkButton runat="server" Text="<i class='fa fa-flag'></i>   REPORT" CssClass="adminPageMenuItem" PostBackUrl="/Admin/Report1" />
                     </div>
                     <hr />
                     <div class="adminPageMoreMenuItems">
