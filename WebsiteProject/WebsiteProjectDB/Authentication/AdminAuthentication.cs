@@ -1,4 +1,4 @@
-﻿using WebsiteProjectDB.Interfaces;
+﻿using WebsiteProjectDB.COMMON.Interfaces.AuthenticationInterfaces;
 using System.Collections;
 using System.Data.SqlClient;
 using System;
@@ -7,7 +7,7 @@ namespace WebsiteProjectDB.Authentication
 {
 	public class AdminAuthentication : IAuthentication
 	{
-		private SqlConnection con;
+		private readonly SqlConnection con;
 
 		public AdminAuthentication()
 		{
@@ -29,6 +29,7 @@ namespace WebsiteProjectDB.Authentication
 				{
 					while(sdr.Read())
 					{
+						htUser.Add("UserId", sdr["ID"]);
 						htUser.Add("strUserName", sdr["Name"].ToString());
 						htUser.Add("strUserEMail", sdr["EMail"].ToString());
 					}

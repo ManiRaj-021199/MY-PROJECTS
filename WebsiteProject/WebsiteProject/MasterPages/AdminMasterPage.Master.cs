@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.UI;
 
 namespace WebsiteProject.MasterPages
 {
@@ -24,6 +23,11 @@ namespace WebsiteProject.MasterPages
 			Session.Remove("AdminEMail");
 
 			Response.Redirect("/Admin");
+		}
+
+		protected void ClearSearchText_Click(object sender, EventArgs e)
+		{
+			adminSearchText.Value = "";
 		}
 	}
 }

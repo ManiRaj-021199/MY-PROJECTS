@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace WebsiteProjectDB.Interfaces
+namespace WebsiteProjectDB.COMMON.Interfaces.AuthenticationInterfaces
 {
 	interface IAuthentication
 	{

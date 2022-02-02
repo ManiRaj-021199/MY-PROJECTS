@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteProject", "WebsitePr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteProjectDB", "WebsiteProjectDB\WebsiteProjectDB.csproj", "{45D71A16-0BF7-4B61-94FA-4B39CF4633AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteProjectBL", "WebsiteProjectBL\WebsiteProjectBL.csproj", "{5A4ABF65-57B0-473F-8028-3ECA930E08F5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{45D71A16-0BF7-4B61-94FA-4B39CF4633AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D71A16-0BF7-4B61-94FA-4B39CF4633AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45D71A16-0BF7-4B61-94FA-4B39CF4633AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A4ABF65-57B0-473F-8028-3ECA930E08F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A4ABF65-57B0-473F-8028-3ECA930E08F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A4ABF65-57B0-473F-8028-3ECA930E08F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A4ABF65-57B0-473F-8028-3ECA930E08F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

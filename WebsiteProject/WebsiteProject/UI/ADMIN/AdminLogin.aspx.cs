@@ -26,6 +26,7 @@ namespace WebsiteProject.UI.ADMIN
 
 			if(adminUser.Contains("strUserName"))
 			{
+				Session["AdminID"] = adminUser["UserId"];
 				Session["AdminUserName"] = adminUser["strUserName"];
 				Session["AdminEMail"] = adminUser["strUserEMail"];
 				

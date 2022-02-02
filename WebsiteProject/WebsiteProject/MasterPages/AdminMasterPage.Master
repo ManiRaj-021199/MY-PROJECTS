@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" autocomplete="off" runat="server">
         <div class="adminPageContainer">
             <div class="adminPageMenu">
                 <div class="adminPageMenuHeader">
@@ -44,8 +44,8 @@
                     <div class="leftSideHeader">
                         <div class="searchBox">
                             <i class="fa fa-search"></i>
-                            <input type="text" name="search" />
-                            <i class="fa fa-close"></i>
+                            <input id="adminSearchText" type="text" name="search" runat="server" />
+                            <asp:LinkButton ID="ClearSearchText" style="color: #2BA8D6" Text='<i class="fa fa-close" title="clearSearchText"></i>' runat="server" OnClick="ClearSearchText_Click" />
                         </div>
                     </div>
                     <div class="rightSideHeader">

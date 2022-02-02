@@ -1,3 +1,61 @@
-﻿h1 {
-	color: red;
+﻿.adminBlogContainer {
+	height: 100%;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.adminBlogContainer .adminBlogHeader {
+	height: 9%;
+	display: flex;
+	align-items: center;
+}
+
+.adminBlogContainer .adminBlogHeader .adminBlogHeaderTitle {
+	width: 40%;
+}
+
+.adminBlogContainer .adminBlogHeader .adminBlogHeaderButtons {
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.adminBlogContainer .adminBlogHeader .adminBlogHeaderButtons input {
+	padding: 10px 20px;
+	margin-left: 10px;
+}
+
+.adminBlogContainer .adminBlogFormContainer {
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.adminBlogContainer .adminBlogFormContainer .adminBlogFormCell {
+	display: flex;
+	justify-content: center;
+}
+
+.adminBlogContainer .adminBlogFormContainer .adminBlogFormCell #successMsg, .adminBlogContainer .adminBlogFormContainer .adminBlogFormCell #failMsg {
+	display: none;
+}
+
+.adminBlogContainer .adminBlogFormContainer .adminBlogFormCell label
+{
+	width: 40%;
+	font-size: 1.3rem;
+}
+
+.adminBlogContainer .adminBlogFormContainer .adminBlogFormCell input[type="text"], .adminBlogContainer .adminBlogFormContainer .adminBlogFormCell textarea {
+	width: 60%;
+}
+
+.adminBlogContainer .adminBlogFormContainer .adminBlogFormCell textarea {
+	resize: none;
+}
+
+.adminBlogContainer .adminBlogFormContainer .adminBlogFormCell input[type="submit"] {
+	padding: 10px 25px;
+	margin-right: 25px;
 }

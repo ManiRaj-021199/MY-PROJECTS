@@ -51,6 +51,24 @@ namespace WebsiteProject.MasterPages
 		protected global::System.Web.UI.HtmlControls.HtmlGenericControl siteAdminEmail;
 
 		/// <summary>
+		/// adminSearchText control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlInputText adminSearchText;
+
+		/// <summary>
+		/// ClearSearchText control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.LinkButton ClearSearchText;
+
+		/// <summary>
 		/// Logout control.
 		/// </summary>
 		/// <remarks>

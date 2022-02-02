@@ -17,7 +17,7 @@
         <div class="formContainer">
             <form method="POST"  id="form1" autocomplete="off" runat="server">
                 <div class="inputContainer">
-                    <label>User Email</label>
+                    <label>Email</label>
                     <input id="adminUserEmail" type="text" name="email" runat="server" /><br />
                 </div>
                 <div class="inputContainer">
